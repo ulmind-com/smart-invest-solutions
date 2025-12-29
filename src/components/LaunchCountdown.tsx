@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 const COUNTDOWN_LOGO = "https://res.cloudinary.com/dbznj2cof/image/upload/v1766696133/Picsart_25-12-26_02-23-24-680-removebg-preview_rtwgku.png";
 
 // ⚡ TOGGLE THIS TO ENABLE/DISABLE COUNTDOWN
-export const COUNTDOWN_ENABLED = false;
+export const COUNTDOWN_ENABLED = true;
 
 // 🎯 SET YOUR LAUNCH DATE HERE (January 1st, 2026 at midnight IST)
 const LAUNCH_DATE = new Date('2026-01-01T00:00:00+05:30');
