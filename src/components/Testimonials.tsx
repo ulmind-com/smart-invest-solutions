@@ -49,6 +49,16 @@ const testimonials = [
     reviews: 71,
     image: "https://res.cloudinary.com/dbznj2cof/image/upload/v1766940323/IMG-20251008-WA0002_-_Ayan_Bagdi_myaost.jpg",
     quote: "Very Satisfied"
+  },
+  {
+    id: 5,
+    name: "Somnath Dey",
+    role: "",
+    text: "Service is so beautiful .... keep it.",
+    rating: 5,
+    reviews: 54,
+    image: "src/assets/Somnath Dey.jpg",
+    quote: "Very Satisfied",
   }
 ];
 
