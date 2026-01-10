@@ -57,7 +57,7 @@ const testimonials = [
     text: "Service is so beautiful .... keep it.",
     rating: 5,
     reviews: 54,
-    image: "src/assets/Somnath Dey.jpg",
+    image: "/Somnath Dey.jpg",
     quote: "Very Satisfied",
   }
 ];
