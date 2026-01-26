@@ -16,6 +16,9 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import ServiceForm from "./ServiceForm";
+import { FileText } from "lucide-react";
+
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -57,7 +60,7 @@ const Navbar = () => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setIsMobileMenuOpen(false);
-    
+
     const target = document.querySelector(href);
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
@@ -76,11 +79,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-2 sm:top-4 left-4 sm:left-8 md:left-16 lg:left-24 right-4 sm:right-8 md:right-16 lg:right-24 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "bg-background/70 backdrop-blur-xl shadow-2xl border border-border/50" 
-          : "bg-background/40 backdrop-blur-lg border border-border/30"
-      } rounded-full`}
+      className={`fixed top-2 sm:top-4 left-4 sm:left-8 md:left-16 lg:left-24 right-4 sm:right-8 md:right-16 lg:right-24 z-50 transition-all duration-300 ${isScrolled
+        ? "bg-background/70 backdrop-blur-xl shadow-2xl border border-border/50"
+        : "bg-background/40 backdrop-blur-lg border border-border/30"
+        } rounded-full`}
     >
       <div className="mx-auto px-3 sm:px-4 md:px-6">
         <div className="flex items-center justify-between h-12 sm:h-14 md:h-16">
@@ -114,7 +116,7 @@ const Navbar = () => {
             </button>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button 
+                <Button
                   variant="outline"
                   className="rounded-full border-primary/50 hover:bg-primary/10"
                 >
@@ -124,9 +126,9 @@ const Navbar = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="w-48">
                 <DropdownMenuItem asChild>
-                  <a 
-                    href="https://fundzbazar.com/Link/jKJUH99KgH4" 
-                    target="_blank" 
+                  <a
+                    href="https://fundzbazar.com/Link/jKJUH99KgH4"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 cursor-pointer"
                   >
@@ -135,9 +137,9 @@ const Navbar = () => {
                   </a>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <a 
-                    href="https://fundzbazar.com/Link/MjHqZqpf3UQ" 
-                    target="_blank" 
+                  <a
+                    href="https://fundzbazar.com/Link/MjHqZqpf3UQ"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 cursor-pointer"
                   >
@@ -147,7 +149,13 @@ const Navbar = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            <Button 
+             <Button asChild onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link to="/form" className="flex items-center gap-2">
+                      <FileText className="w-4 h-4" />
+                      LIC policy Servicing
+                    </Link>
+                  </Button>
+            <Button
               asChild
               className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full"
             >
@@ -217,7 +225,19 @@ const Navbar = () => {
                       Website
                     </a>
                   </div>
-                  <Button 
+
+                  <Button asChild className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90 rounded-full" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link to="/form" className="flex items-center gap-2">
+                      <FileText className="w-4 h-4" />
+                      LIC policy Servicing
+                    </Link>
+                  </Button>
+
+
+
+
+
+                  <Button
                     asChild
                     className="w-full mt-4 bg-primary text-primary-foreground hover:bg-primary/90 rounded-full"
                     onClick={() => setIsMobileMenuOpen(false)}
