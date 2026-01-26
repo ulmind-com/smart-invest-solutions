@@ -53,11 +53,11 @@ const testimonials = [
   {
     id: 5,
     name: "Somnath Dey",
-    role: "",
-    text: "Service is so beautiful .... keep it.",
+    role: "Professional Photographer",
+    text: "Service is so beautiful ... keep it.",
     rating: 5,
     reviews: 54,
-    image: "/Somnath Dey.jpg",
+    image: "Somnath Dey.jpg",
     quote: "Very Satisfied",
   }
 ];
