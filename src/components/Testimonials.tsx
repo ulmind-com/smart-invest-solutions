@@ -59,6 +59,16 @@ const testimonials = [
     reviews: 54,
     image: "Somnath Dey.jpg",
     quote: "Very Satisfied",
+  },
+  {
+    id: 6,
+    name: "Soumallya Ghosh",
+    role: "",
+    text: "So helpfull and guide properly",
+    rating: 5,
+    reviews: 84,
+    image: "soumallya.jpg",
+    quote: "Very Satisfied",
   }
 ];
 
