@@ -69,7 +69,7 @@ const testimonials = [
     reviews: 84,
     image: "soumallya.jpg",
     quote: "Very Satisfied",
-  }
+  },
 ];
 
 const Testimonials = () => {
