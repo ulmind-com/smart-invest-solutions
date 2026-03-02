@@ -139,9 +139,12 @@ const Index = () => {
           <Contact />
         </div>
         <Footer />
+
         {/* {isLeadCaptured && <WhatsAppWidget />} */}
+        
         <WhatsAppWidget />
       </div>
+
     // </div>
   );
 };
