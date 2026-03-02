@@ -66,7 +66,7 @@ const testimonials = [
     role: "",
     text: "So helpfull and guide properly",
     rating: 5,
-    reviews: 84,
+    reviews: 86,
     image: "soumallya.jpg",
     quote: "Very Satisfied",
   }
