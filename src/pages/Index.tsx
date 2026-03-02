@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
-import LeadCapturePopup from "@/components/LeadCapturePopup";
+// import LeadCapturePopup from "@/components/LeadCapturePopup";
 import LaunchCountdown, { COUNTDOWN_ENABLED } from "@/components/LaunchCountdown";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -98,11 +98,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {!isLeadCaptured && (
+      {/* {!isLeadCaptured && (
         <LeadCapturePopup onComplete={() => setIsLeadCaptured(true)} />
       )}
       
-      <div className={!isLeadCaptured ? "blur-sm pointer-events-none select-none" : ""}>
+      <div className={!isLeadCaptured ? "blur-sm pointer-events-none select-none" : ""}> */}
         <Navbar />
         <Hero />
         <div data-animate data-animation="fade-in-up">
@@ -139,9 +139,10 @@ const Index = () => {
           <Contact />
         </div>
         <Footer />
-        {isLeadCaptured && <WhatsAppWidget />}
+        {/* {isLeadCaptured && <WhatsAppWidget />} */}
+        <WhatsAppWidget />
       </div>
-    </div>
+    // </div>
   );
 };
 
