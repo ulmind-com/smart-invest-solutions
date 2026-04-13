@@ -173,17 +173,22 @@ const Footer = () => {
           <p className="text-foreground/50 text-[10px] sm:text-xs mt-1.5 sm:mt-2">
             Investments are subject to market risks. Please read all scheme related documents carefully before investing.
           </p>
-          <p className="text-foreground/40 text-[10px] sm:text-xs mt-3 sm:mt-4">
-            Website designed and developed by{" "}
+          <div className="flex items-center justify-center gap-2 mt-3 sm:mt-4 text-[10px] sm:text-xs text-foreground/40">
+            <span>Website designed and developed by</span>
             <a 
               href="https://www.ulmind.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-primary font-medium hover:text-primary/80 transition-colors underline-offset-2 hover:underline"
+              className="group relative flex items-center justify-center transition-all duration-300 hover:-translate-y-0.5"
             >
-              ULMiND
+              <div className="absolute inset-0 bg-primary/20 blur-md rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <img 
+                src="/ULMIND_logo.png" 
+                alt="ULMiND" 
+                className="h-6 sm:h-7 md:h-8 w-auto object-contain relative z-10 transition-transform duration-300" 
+              />
             </a>
-          </p>
+          </div>
         </div>
       </div>
     </footer>
