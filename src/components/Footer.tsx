@@ -1,4 +1,5 @@
 import { Facebook, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 import sisLogo from "@/assets/sis-logo.png";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -29,7 +30,7 @@ const Footer = () => {
       { label: "FAQ", href: "#" },
     ],
     legal: [
-      { label: "Privacy Policy", href: "#" },
+      { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "#" },
       { label: "Disclaimer", href: "#" },
       { label: "Regulatory", href: "#" },
@@ -152,11 +153,17 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 text-xs sm:text-sm text-foreground/60">
-            {footerLinks.legal.map((link, index) => (
-              <a key={index} href={link.href} className="hover:text-primary transition-colors">
-                {link.label}
-              </a>
-            ))}
+            {footerLinks.legal.map((link, index) =>
+              link.href.startsWith("/") ? (
+                <Link key={index} to={link.href} className="hover:text-primary transition-colors">
+                  {link.label}
+                </Link>
+              ) : (
+                <a key={index} href={link.href} className="hover:text-primary transition-colors">
+                  {link.label}
+                </a>
+              )
+            )}
           </div>
         </div>
 
