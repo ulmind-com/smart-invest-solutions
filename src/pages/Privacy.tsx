@@ -30,7 +30,9 @@ import { Button } from "@/components/ui/button";
 import sisLogo from "@/assets/sis-logo.png";
 
 const LAST_UPDATED = "23 September 2026";
-const CONTACT_EMAIL = "smartinvest.solutions.supoort@gmail.com";
+const SUPPORT_EMAIL = "smart.wealth.support@gmail.com";
+const WEBSITE_EMAIL = "smartinvest.solutions.supoort@gmail.com";
+const GRIEVANCE_OFFICER = "Soumyajit Datta";
 const CONTACT_PHONE = "+91 96411 66805";
 const CONTACT_ADDRESS = "Pakhanna Bus Stand, Bankura, West Bengal - 722208, India";
 const APP_PACKAGE = "com.ulmind.smartwealth";
@@ -467,8 +469,8 @@ const Privacy = () => {
               <p>
                 Your consent is specific, informed and freely given. You may withdraw it at any time
                 by deleting your account in the app, or by writing to us at{" "}
-                <a href={`mailto:${CONTACT_EMAIL}`} className="text-primary hover:underline break-all">
-                  {CONTACT_EMAIL}
+                <a href={`mailto:${SUPPORT_EMAIL}`} className="text-primary hover:underline break-all">
+                  {SUPPORT_EMAIL}
                 </a>
                 . Withdrawal does not affect processing already carried out, and we may still retain
                 records the law requires us to keep.
@@ -761,10 +763,10 @@ const Privacy = () => {
                 <li>
                   Email{" "}
                   <a
-                    href={`mailto:${CONTACT_EMAIL}?subject=Data%20Deletion%20Request`}
+                    href={`mailto:${SUPPORT_EMAIL}?subject=Data%20Deletion%20Request`}
                     className="text-primary hover:underline break-all"
                   >
-                    {CONTACT_EMAIL}
+                    {SUPPORT_EMAIL}
                   </a>{" "}
                   with the subject <strong>"Data Deletion Request"</strong>.
                 </li>
@@ -814,22 +816,42 @@ const Privacy = () => {
             <Section id="contact" icon={Mail} title="Contact & Grievance Officer">
               <p>
                 If you have any question, concern or complaint about this policy or about how your
-                data is handled, please reach out. Our Grievance Officer, appointed under the
-                Information Technology Act, 2000 and the Digital Personal Data Protection Act, 2023,
-                will acknowledge your complaint and respond within 30 days.
+                data is handled, please reach out. In line with the Information Technology Act, 2000
+                and the Digital Personal Data Protection Act, 2023, we have appointed a Grievance
+                Officer who will acknowledge your complaint and respond within 30 days.
               </p>
+              <div className="not-prose flex items-start gap-3 p-5 rounded-xl bg-primary/5 border border-primary/20 my-6">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <UserCheck className="w-5 h-5 text-primary" />
+                </div>
+                <div className="min-w-0">
+                  <p className="text-xs uppercase tracking-wide text-primary/80 font-medium mb-1">
+                    Grievance Officer
+                  </p>
+                  <p className="text-base font-semibold text-foreground">{GRIEVANCE_OFFICER}</p>
+                  <p className="text-sm text-foreground/65 mb-2">Smart Invest Solutions &middot; SmartWealth</p>
+                  <a
+                    href={`mailto:${SUPPORT_EMAIL}?subject=Grievance%20-%20Privacy`}
+                    className="text-sm text-primary hover:underline break-all"
+                  >
+                    {SUPPORT_EMAIL}
+                  </a>
+                </div>
+              </div>
               <div className="not-prose grid sm:grid-cols-2 gap-4 mt-6">
                 <a
-                  href={`mailto:${CONTACT_EMAIL}`}
+                  href={`mailto:${SUPPORT_EMAIL}`}
                   className="flex items-start gap-3 p-4 rounded-xl bg-card border border-border hover:border-primary/40 transition-colors group"
                 >
                   <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <Mail className="w-4 h-4 text-primary" />
                   </div>
                   <div className="min-w-0">
-                    <p className="text-xs uppercase tracking-wide text-foreground/50 mb-0.5">Email</p>
+                    <p className="text-xs uppercase tracking-wide text-foreground/50 mb-0.5">
+                      Privacy & app support
+                    </p>
                     <p className="text-sm text-foreground group-hover:text-primary transition-colors break-all">
-                      {CONTACT_EMAIL}
+                      {SUPPORT_EMAIL}
                     </p>
                   </div>
                 </a>
@@ -846,6 +868,22 @@ const Privacy = () => {
                     <p className="text-xs uppercase tracking-wide text-foreground/50 mb-0.5">Phone</p>
                     <p className="text-sm text-foreground group-hover:text-primary transition-colors">
                       {CONTACT_PHONE}
+                    </p>
+                  </div>
+                </a>
+                <a
+                  href={`mailto:${WEBSITE_EMAIL}`}
+                  className="sm:col-span-2 flex items-start gap-3 p-4 rounded-xl bg-card border border-border hover:border-primary/40 transition-colors group"
+                >
+                  <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-4 h-4 text-primary" />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-xs uppercase tracking-wide text-foreground/50 mb-0.5">
+                      General enquiries
+                    </p>
+                    <p className="text-sm text-foreground group-hover:text-primary transition-colors break-all">
+                      {WEBSITE_EMAIL}
                     </p>
                   </div>
                 </a>
